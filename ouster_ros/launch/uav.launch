@@ -1,6 +1,6 @@
 <launch>
 
-  <arg name="UAV_NAME" default="$(env UAV_NAME)" />
+  <!-- <arg name="UAV_NAME" default="$(env UAV_NAME)" /> -->
 
   <arg name="debug" default="false" />
   <arg unless="$(arg debug)" name="launch_prefix" value=""/>
@@ -9,14 +9,14 @@
   <arg name="sensor_hostname" default="$(env OUSTER_IP)" doc="hostname or IP in dotted decimal form of the sensor"/>
   <arg name="udp_dest" default="$(env OUSTER_UDP_DEST_IP)" doc="hostname or IP where the sensor will send data packets"/>
 
-  <arg name="lidar_mode" default="1024x10" doc="resolution and rate: either 512x10, 512x20, 1024x10, 1024x20, or 2048x10"/>
+  <arg name="lidar_mode" default="512x20" doc="resolution and rate: either 512x10, 512x20, 1024x10, 1024x20, or 2048x10"/>
   <arg name="timestamp_mode" default="" doc="method used to timestamp measurements: TIME_FROM_INTERNAL_OSC, TIME_FROM_SYNC_PULSE_IN, TIME_FROM_PTP_1588"/>
   <arg name="replay" default="false" doc="do not connect to a sensor; expect /os_node/{lidar,imu}_packets from replay"/>
   <arg name="lidar_port" default="0" doc="port to which the sensor should send lidar data"/>
   <arg name="imu_port" default="0" doc="port to which the sensor should send imu data"/>
   <arg name="metadata" default="" doc="override default metadata file for replays"/>
 
-  <arg name="tf_prefix" default="$(env UAV_NAME)" doc="namespace for tf transforms"/>
+  <arg name="tf_prefix" default="" doc="namespace for tf transforms"/>
 
   <arg name="image" default="false" doc="publish range/intensity/ambient image topic"/>
 
