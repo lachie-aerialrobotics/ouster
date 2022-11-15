@@ -55,6 +55,16 @@
 
     </node>
 
+    <rosparam command="load" file="$(find fast_lio)/config/ouster64.yaml" />
+
+    <param name="feature_extract_enable" type="bool" value="true"/>
+    <param name="point_filter_num" type="int" value="6"/>
+    <param name="max_iteration" type="int" value="2" />
+    <param name="filter_size_surf" type="double" value="0.25" />
+    <param name="filter_size_map" type="double" value="0.35" />
+    <param name="cube_side_length" type="double" value="100" />
+    <param name="runtime_pos_log_enable" type="bool" value="0" />
+    
     <node pkg="nodelet" type="nodelet" name="FAST_LIO_Nodelet" args="$(arg nodelet) fast_lio/FAST_LIO_Nodelet $(arg nodelet_manager)" output="screen" launch-prefix="$(arg launch_prefix)"/>
 
     <node if="$(arg image)" pkg="nodelet" type="nodelet" name="os_img_nodelet" args="$(arg nodelet) ouster_nodelet/OusterImgNodelet $(arg nodelet_manager)" output="screen" launch-prefix="$(arg launch_prefix)">
