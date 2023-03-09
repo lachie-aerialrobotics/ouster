@@ -7,7 +7,7 @@
   <arg     if="$(arg debug)" name="launch_prefix" value="debug_roslaunch"/>
 
   <arg name="sensor_hostname" default="10.5.5.86" doc="hostname or IP in dotted decimal form of the sensor"/>
-  <arg name="udp_dest" default="192.168.0.170" doc="hostname or IP where the sensor will send data packets"/>
+  <arg name="udp_dest" default="192.168.0.185" doc="hostname or IP where the sensor will send data packets"/>
 
   <arg name="lidar_mode" default="512x20" doc="resolution and rate: either 512x10, 512x20, 1024x10, 1024x20, or 2048x10"/>
   <arg name="timestamp_mode" default="TIME_FROM_PTP_1588" doc="method used to timestamp measurements: TIME_FROM_INTERNAL_OSC, TIME_FROM_SYNC_PULSE_IN, TIME_FROM_PTP_1588"/>
