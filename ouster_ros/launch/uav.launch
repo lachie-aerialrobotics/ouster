@@ -14,7 +14,7 @@
   <arg name="replay" default="false" doc="do not connect to a sensor; expect /os_node/{lidar,imu}_packets from replay"/>
   <arg name="lidar_port" default="7502" doc="port to which the sensor should send lidar data"/>
   <arg name="imu_port" default="7503" doc="port to which the sensor should send imu data"/>
-  <arg name="metadata" default="/home/xavier02/lidar_metadata/ouster_data.json" doc="override default metadata file for replays"/>
+  <arg name="metadata" default="/home/aam01/lidar_metadata/ouster_data.json" doc="override default metadata file for replays"/>
 
   <arg name="tf_prefix" default="" doc="namespace for tf transforms"/>
 
